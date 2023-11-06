@@ -14,6 +14,9 @@ app.use(bodyParser.json())
 const TestRoute = require("./routes/TestRoute")
 app.use('/test',TestRoute)
 
+const USerRoute = require("./routes/UserRoute")
+app.use('/user',USerRoute)
+
 app.get("/", (req, res) => {
     res.send("hello world");
   });
