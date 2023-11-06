@@ -1,0 +1,94 @@
+.createpost {
+  height: calc(100dvh - 8vh - 5vh);
+  width: 100dvw;
+}
+
+body {
+  background-color: #ddf9d2;
+}
+
+.createpost_container {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0 auto;
+
+  align-items: center;
+  margin-top: 5vh;
+
+  background-color: white;
+  height: 70vh;
+  width: 80vw;
+}
+
+.createpost_left,
+.createpost_right {
+  width: 50%;
+}
+
+.createpost_left {
+  margin: 5vw;
+}
+.createpost_left h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2vh;
+}
+.createpost_left h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2vh;
+}
+
+.createpost_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.createpost_right input[type="text"] {
+  width: 80%;
+  height: 5vh;
+  margin-bottom: 2vh;
+  border: 3px solid #3ca117;
+  border-radius: 5px;
+  padding: 0 1vw;
+}
+
+.createpost_right input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+.createpost_right textarea {
+  width: 80%;
+  height: 15vh;
+  margin-bottom: 2vh;
+  border: 3px solid #3ca117;
+  border-radius: 5px;
+  padding: 1vh 1vw;
+  font-family: "Montserrat";
+}
+
+.createpost_right textarea::placeholder,
+input[type="text"]::placeholder {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.createpost_right_checkbox input {
+  margin-bottom: 2vh;
+  border: 2px solid #3ca117;
+}
+
+.createpost_right button {
+  border: 4px solid #3ca117;
+  border-radius: 5px;
+  height: 5vh;
+  width: 10vw;
+  background-color: white;
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
