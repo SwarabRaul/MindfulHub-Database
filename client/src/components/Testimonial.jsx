@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Testimonial.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import './Testimonial.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const testimonials = [
     {
