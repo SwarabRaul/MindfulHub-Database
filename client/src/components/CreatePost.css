@@ -29,11 +29,13 @@ body {
 .createpost_left {
   margin: 5vw;
 }
+
 .createpost_left h1 {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 2vh;
 }
+
 .createpost_left h4 {
   font-size: 1rem;
   font-weight: 500;

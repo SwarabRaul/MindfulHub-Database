@@ -1,4 +1,4 @@
-import "./CreatePost.css";
+import './CreatePost.css';
 
 const CreatePost = () => {
   return (
