@@ -5,10 +5,13 @@ const Chat = () => {
   const navigate = useNavigate();
 
   const [posts, setPosts] = useState();
+  const [isDisabled,setIsDisabled] = useState(true)
 
   useEffect(() => {
     document.title = "Chat";
     document.body.style.backgroundColor = "#ffffff";
+
+    localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true)
 
     fetch("http://localhost:8081/post")
       .then((res) => res.json())
@@ -26,6 +29,7 @@ const Chat = () => {
         onClick={() => {
           navigate("/schedulechat");
         }}
+        disabled={isDisabled}
       >
         Schedule a Chat with Expert
       </button>
@@ -33,6 +37,7 @@ const Chat = () => {
         onClick={() => {
           navigate("/createpost");
         }}
+        disabled={isDisabled}
       >
         Create a Post
       </button>
