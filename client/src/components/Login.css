@@ -67,7 +67,7 @@ input[type="password"] {
     
 }
 
-button {
+.login {
     background-color:forestgreen;
     color: #fff;
     border: none;
@@ -78,7 +78,7 @@ button {
 }
 
 
-button:hover {
+.login:hover {
     background-color:chocolate;
 }
 

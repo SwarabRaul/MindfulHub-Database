@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
 import './Login.css';
-
-
-
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate()
+
+    useEffect(() => {
+      
+        if( localStorage.getItem("token") ){
+            navigate('/')
+        }
+
+    }, [navigate])
+    
 
     const handleLogin = async () => {
-        // Send a POST request to your server to authenticate the user
-        const response = await fetch('/user/login', {
-            method: 'POSR',
+        const response = await fetch('http://localhost:8081/user/login', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -19,14 +26,18 @@ const Login = () => {
         });
 
         if (response.status === 200) {
-            // User logged in successfully, you can redirect to another page
-            // Example: window.location.href = '/dashboard';
-        } else {
-            // Handle login error
-            console.error('Login failed');
-        }
-    };
+            const data = await response.json()
+            localStorage.setItem('token',data)
+            window.location.reload()
 
+            navigate('/')
+        } else {
+            const data = await response.json()
+            alert(data.message);
+        }
+
+    };
+  
     return (
         <div class="login-container">
         <h2>MindfulHub</h2>
@@ -45,7 +56,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button onClick={handleLogin}>Login</button>
+            <button class="login" onClick={handleLogin}>Login</button>
         </form>
     </div>
     );
