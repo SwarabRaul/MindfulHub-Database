@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser')
-const PORT = 3002
+const cors = require('cors');
+const PORT = 8080
 
 const connectDB = require('./database')
 
 // Middleware
+app.use(cors());
 // app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -14,8 +16,8 @@ app.use(bodyParser.json())
 const TestRoute = require("./routes/TestRoute")
 app.use('/test',TestRoute)
 
-const USerRoute = require("./routes/UserRoute")
-app.use('/user',USerRoute)
+const UserRoute = require("./routes/UserRoute")
+app.use('/user',UserRoute)
 
 app.get("/", (req, res) => {
     res.send("hello world");
