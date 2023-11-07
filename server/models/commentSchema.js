@@ -1,18 +1,13 @@
 const mongoose = require('mongoose');
 
-const scheduleChatSchema = new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
     },
-    expert: {
+    post: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Expert',
-        required: true
-    },
-    scheduledDateTime: {
-        type: Date,
+        ref: 'Post',
         required: true
     },
     message: {
@@ -21,6 +16,6 @@ const scheduleChatSchema = new mongoose.Schema({
     }
 });
 
-const Expert = mongoose.model('Expert', scheduleChatSchema);
+const Comment = mongoose.model('Comment', commentSchema);
 
-module.exports = Expert;
+module.exports = Comment;
