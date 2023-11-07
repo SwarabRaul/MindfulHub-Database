@@ -6,12 +6,18 @@
     justify-content: space-between;
 
     height: 8vh;
-
+    background-color: #ddf9d2;
 }
 
 .navbar_header{
     margin: 0 0 0 3vw;
     padding: 0;
+}
+
+.navbar_header a{
+    text-decoration: none;
+    color: #000;
+
 }
 
 .navbar_ul{
