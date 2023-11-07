@@ -38,7 +38,7 @@ const Navbar = () => {
         <li>
           <NavLink to="/chat">CHAT</NavLink>
         </li>
-        <li>{loginButton}</li>
+        {loginButton}
       </ul>
     </div>
   );

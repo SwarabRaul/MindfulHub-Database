@@ -1,32 +1,41 @@
 import "./CreatePost.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const [data, setDate] = useState({
     title: "",
-    description: "",
-    anonymous: false,
+    message: "",
+    isAnonymous: false,
   });
 
+  const [id, setId] = useState("");
+
+  const navigate = useNavigate()
+  
   useEffect(() => {
     document.title = "Create Post";
     // background color
     document.body.style.backgroundColor = "#ddf9d2";
-
+    localStorage.getItem("token")
+      ? setId(localStorage.getItem("token"))
+      : setId("");
   }, []);
 
   const handleClick = () => {
-    console.log(data);
-    // fetch("http://localhost:8081/post/create", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    //   credentials: "include",
-    // }).then((res) => {
-    //   console.log(res);
-    // });
+    fetch("http://localhost:8081/post/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...data, user: id }),
+      credentials: "include",
+    }).then((res) => {
+      if(res.status===200){
+        alert("Post Created Successfully")
+        navigate('/chat')
+      }
+    });
   };
 
   return (
@@ -50,9 +59,9 @@ const CreatePost = () => {
           />
           <textarea
             placeholder="Description"
-            value={data.description}
+            value={data.message}
             onChange={(event) => {
-              setDate({ ...data, description: event.target.value });
+              setDate({ ...data, message: event.target.value });
             }}
           ></textarea>
           <div className="createpost_right_checkbox">
@@ -60,14 +69,22 @@ const CreatePost = () => {
               type="checkbox"
               name="anonymous"
               id="anonymous"
-              value={data.anonymous}
+              value={data.isAnonymous}
               onChange={() => {
-                setDate({ ...data, anonymous: !data.anonymous });
+                setDate({ ...data, isAnonymous: !data.isAnonymous });
               }}
             />
             <label htmlFor="anonymous">Post Anonymously</label>
           </div>
-          <button onClick={handleClick}>Post</button>
+          <button
+            onClick={() => {
+              localStorage.getItem("token")
+                ? handleClick()
+                : alert("Please Login to create a post");
+            }}
+          >
+            Post
+          </button>
         </div>
       </div>
     </div>

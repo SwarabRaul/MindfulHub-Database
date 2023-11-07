@@ -7,7 +7,12 @@ const PORT = 8081;
 const connectDB = require("./database");
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true, // Allow credentials (e.g., cookies)
+  })
+);
 // app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
