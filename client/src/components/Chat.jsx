@@ -17,7 +17,6 @@ const Chat = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setPosts(data);
       });
   }, []);
 
@@ -41,7 +40,14 @@ const Chat = () => {
       >
         Create a Post
       </button>
-      {posts?.length !== 0 ? <></> : <h1>No post Found</h1>}
+      {posts?.length !== 0 ? <>{posts?.map((item)=>{
+        return(
+          <div key={item._id}>
+            <h1>{item.title}</h1>
+            <h3>{item.message}</h3>
+          </div>
+        )
+      })}</> : <h1>No post Found</h1>}
     </div>
   );
 };
