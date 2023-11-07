@@ -1,8 +1,9 @@
 // import { useEffect } from "react";
 import "./Navbar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faLeaf } from '@fortawesome/free-solid-svg-icons'
 
 import { Link, NavLink } from "react-router-dom";
-
 const Navbar = () => {
 
 
@@ -24,8 +25,11 @@ const Navbar = () => {
   );
 
   return (
+   
+
     <div className="navbar_container">
       <h1 className="navbar_header">
+      <FontAwesomeIcon icon={faLeaf} />
         <Link to="/">MindfulHub</Link>
       </h1>
       <ul className="navbar_ul">

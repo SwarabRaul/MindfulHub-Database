@@ -3,9 +3,13 @@
     background-color: #0056b3;
 }
 
+body{
+    background-image: url("./bglogin2.jpg");
+    background-size: cover;
+  }
 
 .login-container {
-    background-color: #fff;
+    background-color: rgb(230, 230, 228);
     padding: 20px;
     border-radius: 5px;
     width: 25%;
