@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Login from './components/Login'
 import Registration from './components/Registration'
 import ScheduleChat from './components/ScheduleChat'
+import Testimonial from './components/Testimonial'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Registration />
       <CreatePost />
       <ScheduleChat />
+      <Testimonial />
     </>
   )
 }
