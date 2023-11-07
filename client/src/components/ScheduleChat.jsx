@@ -60,15 +60,6 @@ const ScheduleChat = () => {
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
-                        <div className="schedulechat_right_checkbox">
-                            <input
-                                type="checkbox"
-                                id="anonymous"
-                                checked={isAnonymous}
-                                onChange={() => setIsAnonymous(!isAnonymous)}
-                            />
-                            <label htmlFor="anonymous">Post Anonymously</label>
-                        </div>
                         <button type="submit">Schedule Chat</button>
                     </form>
                 </div>
