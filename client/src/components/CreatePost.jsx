@@ -12,6 +12,7 @@ const CreatePost = () => {
     document.title = "Create Post";
     // background color
     document.body.style.backgroundColor = "#ddf9d2";
+
   }, []);
 
   const handleClick = () => {
