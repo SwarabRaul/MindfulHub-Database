@@ -12,11 +12,13 @@ const Chat = () => {
     document.body.style.backgroundColor = "#ffffff";
 
     localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true)
+    
 
     fetch("http://localhost:8081/post")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setPosts(data)
       });
   }, []);
 
