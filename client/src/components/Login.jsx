@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import './Login.css'
+ import './Login.css'
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -39,8 +39,12 @@ const Login = () => {
     };
 
     return (
+        <div class="bg1">
+              
+            <div class="backdrop-filter">
+               
         < div className="login-container" >
-            <h2>MindfulHub</h2>
+            <h2>Log In</h2>
             <div class="login-form">
                 <label htmlFor="username">Username</label>
                 <input type="text"
@@ -56,15 +60,18 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
 
                 />
-
+             <div class="btn">
                 <button class="login" onClick={handleLogin}>Login</button>
 
                 {/* Add the Sign Up button with a Link to the Registration page */}
                 <Link to="/register">
                     <button class="signup">Sign Up</button>
                 </Link>
+                </div>
             </div>
         </div >
+        </div>
+        </div>
     );
 };
 
