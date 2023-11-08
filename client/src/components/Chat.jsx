@@ -17,7 +17,6 @@ const Chat = () => {
     fetch("http://localhost:8081/post")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setPosts(data)
       });
   }, []);
@@ -44,7 +43,9 @@ const Chat = () => {
       </button>
       {posts?.length !== 0 ? <>{posts?.map((item)=>{
         return(
-          <div key={item._id}>
+          <div key={item._id} onClick={()=>{
+            navigate(`/${item._id}`)
+          }} >
             <h1>{item.title}</h1>
             <h3>{item.message}</h3>
           </div>

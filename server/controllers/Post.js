@@ -16,9 +16,8 @@ const getPostById = async(req,res) => {
         const post = await Post.findById(req.params.id);
         if(post){
             const comments = await Comment.find({post: req.params.id})
-            res.status(200).json({test, comments});
+            res.status(200).json({post, comments});
         }
-        res.status(200).json(post);
     } catch (error) {
         console.log(error.message)
         res.status(500).json({message: "Internal Server Error"})

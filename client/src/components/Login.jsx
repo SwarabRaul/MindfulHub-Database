@@ -39,25 +39,25 @@ const Login = () => {
     };
 
     return (
-        <div class="login-container">
+        <div className="login-container">
         <h2>MindfulHub</h2>
-        <form class="login-form" action="login.php" method="post">
-            <label for="username">Username</label>
+        <div className="login-form">
+            <label htmlFor="username">Username</label>
             <input type="text" 
              value={username} 
              required placeholder='Enter username'
              onChange={(e) => setUsername(e.target.value)}
              />
 
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" 
             value={password} 
             required placeholder='Enter Password'
             onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button class="login" onClick={handleLogin}>Login</button>
-        </form>
+            <button className="login" onClick={handleLogin}>Login</button>
+        </div>
     </div>
     );
 };
