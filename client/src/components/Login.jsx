@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css'
+import { Link, useNavigate } from 'react-router-dom';
+// import './Login.css'
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -8,13 +8,13 @@ const Login = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-      
-        if( localStorage.getItem("token") ){
+
+        if (localStorage.getItem("token")) {
             navigate('/')
         }
 
     }, [navigate])
-    
+
 
     const handleLogin = async () => {
         const response = await fetch('http://localhost:8081/user/login', {
@@ -27,7 +27,7 @@ const Login = () => {
 
         if (response.status === 200) {
             const data = await response.json()
-            localStorage.setItem('token',data)
+            localStorage.setItem('token', data)
             window.location.reload()
 
             navigate('/')
@@ -39,6 +39,7 @@ const Login = () => {
     };
 
     return (
+feat/postpagecomments
         <div className="login-container">
         <h2>MindfulHub</h2>
         <div className="login-form">
@@ -54,9 +55,17 @@ const Login = () => {
             value={password} 
             required placeholder='Enter Password'
             onChange={(e) => setPassword(e.target.value)}
-            />
 
+            />
+            <button onClick={handleLogin}>Login</button>
+
+feat/postpagecomments
             <button className="login" onClick={handleLogin}>Login</button>
+
+            {/* Add the Sign Up button with a Link to the Registration page */}
+            <Link to="/register">
+                <button class="signup">Sign Up</button>
+            </Link>
         </div>
     </div>
     );
