@@ -1,60 +1,39 @@
-
-.login:hover {
-    background-color: #0056b3;
-}
-
-
-.login-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 25%;
-    margin-top: 50px;
-    margin-left: 35%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.login-form {
+div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-h2{
-    text-align: center;
+div h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-label {
-    margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}  
-
-input[type="text"],
-input[type="password"] {
+input {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.login {
-    background-color:forestgreen;
+button {
+    background-color: #007bff;
     color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-
-.login:hover {
-    background-color:chocolate;
+button+input {
+    margin-top: 10px;
 }
 
-::placeholder{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: #ccc;
-    font-style:bold;
+button:hover {
+    background-color: #0056b3;
 }
