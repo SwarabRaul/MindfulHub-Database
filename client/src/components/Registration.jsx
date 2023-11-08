@@ -8,7 +8,7 @@ const Registration = () => {
 
     const handleRegister = async () => {
         // Send a POST request to your server to create a new user
-        const response = await fetch('http://localhost:8080/user/register', {
+        const response = await fetch('http://localhost:8081/user/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
