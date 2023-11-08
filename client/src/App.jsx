@@ -6,6 +6,7 @@ import Registration from './components/Registration'
 import ScheduleChat from './components/ScheduleChat'
 import Chat from './components/Chat'
 import Testimonial from './components/Testimonial'
+import PostPage from './components/PostPage'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/createpost' element={<CreatePost />} />
           <Route path='/chat' element={<Chat />} />
           <Route path='/schedulechat' element={<ScheduleChat />} />
+          <Route path='/:id' element={<PostPage />} />
         </Routes>
       </Router>
 

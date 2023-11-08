@@ -39,27 +39,35 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+feat/postpagecomments
+        <div className="login-container">
+        <h2>MindfulHub</h2>
+        <div className="login-form">
+            <label htmlFor="username">Username</label>
+            <input type="text" 
+             value={username} 
+             required placeholder='Enter username'
+             onChange={(e) => setUsername(e.target.value)}
+             />
+
+            <label htmlFor="password">Password</label>
+            <input type="password" 
+            value={password} 
+            required placeholder='Enter Password'
+            onChange={(e) => setPassword(e.target.value)}
+
             />
             <button onClick={handleLogin}>Login</button>
+
+feat/postpagecomments
+            <button className="login" onClick={handleLogin}>Login</button>
 
             {/* Add the Sign Up button with a Link to the Registration page */}
             <Link to="/register">
                 <button class="signup">Sign Up</button>
             </Link>
         </div>
+    </div>
     );
 };
 

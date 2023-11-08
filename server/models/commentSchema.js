@@ -13,6 +13,10 @@ const commentSchema = new mongoose.Schema({
     message: {
         type: String,
         required: true
+    },
+    isAnonymous: {
+        type: Boolean,
+        default: false
     }
 });
 
