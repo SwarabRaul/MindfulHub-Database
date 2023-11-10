@@ -6,6 +6,7 @@ const PostPage = () => {
   const { id } = useParams();
   const [userid, setuserid] = useState("");
   const [user, setUser] = useState("Anonymous");
+  const [commenter, setCommenter] = useState("Anonymous");
   const [postData, setPostData] = useState({
     title: "",
     message: "",
@@ -39,39 +40,37 @@ const PostPage = () => {
         } else {
           setUser("Anonymous");
         }
+
+        const res = await fetch(`http://localhost:8081/user/${userid}`);
+        const data = await res.json();
+        // console.log(data);
+        setCommenter(data.username)
       } catch (error) {
         // Handle any errors, e.g., network issues, in a meaningful way.
         console.error(error);
       }
     };
     fetchData();
-  }, [id]);
+  }, [id, userid]);
 
-  const handleComment = () => {
+  const handleComment = async () => {
     if (userid) {
-      setNewComment((prev) => ({
-        ...prev,
-        user: userid,
-        post: id,
-      }));
 
-      fetch("http://localhost:8081/post/comment", {
+      const response = await fetch("http://localhost:8081/post/comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newComment),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setComments((prev) => [...prev, data]);
-          setNewComment({
-            message: "",
-            user: "",
-            isAnonymous: false,
-            post: "",
-          });
-        });
+        body: JSON.stringify({
+          message: newComment.message,
+          user: commenter,
+          isAnonymous: newComment.isAnonymous,
+          post: id,
+        }),
+      });
+      let data = response.json();
+      console.log(data);
+      window.location.reload()
     } else {
       alert("Please Login to Comment");
     }
