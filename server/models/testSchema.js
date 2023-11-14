@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const TestSchema = mongoose.Schema(
-  {
+const testSchema = mongoose.Schema(
+{
     _id: {
-      type: String,
-      required: true,
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
     },
     1: {
         type: Number,
@@ -47,14 +47,14 @@ const TestSchema = mongoose.Schema(
         enum: [1,2,3,4,5]
     },
     9: {
-      type: Number,
-      required: true,
-      enum: [1,2,3,4,5]
+        type: Number,
+        required: true,
+        enum: [1,2,3,4,5]
     },
     10: {
-      type: Number,
-      required: true,
-      enum: [1,2,3,4,5]
+        type: Number,
+        required: true,
+        enum: [1,2,3,4,5]
     },
 },
 {
@@ -62,5 +62,5 @@ const TestSchema = mongoose.Schema(
 }
 );
 
-const Test = mongoose.model("report", TestSchema);
+const Test = mongoose.model("report", testSchema);
 module.exports = Test;
