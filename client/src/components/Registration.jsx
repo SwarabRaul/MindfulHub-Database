@@ -21,7 +21,7 @@ const Registration = () => {
         if (response.status === 200) {
             // User registered successfully, you can show a success message or redirect to the login page
             // Example: window.location.href = '/login';
-            navigate('/login');
+            navigate('/questionnaireForm');
         } else {
             // Handle registration error
             console.error('Registration failed');
