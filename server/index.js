@@ -41,6 +41,7 @@ http.listen(PORT, () => {
   } catch (err) {
     console.log("Unable to start server: " + err);
   }
+
 });
 
 // Live Chat
@@ -58,4 +59,4 @@ io.on('connection',(socket)=>{
     socket.broadcast.emit('message',msg)
   })
 
-})
+});
