@@ -30,10 +30,10 @@ const Navbar = () => {
       </h1>
       <ul className="navbar_ul">
         <li>
-          <NavLink to="/">BLOGS</NavLink>
+          <NavLink to="/blog">BLOGS</NavLink>
         </li>
         <li>
-          <NavLink to="/">RESOURCES</NavLink>
+          <NavLink to="/resources">RESOURCES</NavLink>
         </li>
         <li>
           <NavLink to="/chat">CHAT</NavLink>
