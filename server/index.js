@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = 8081;
 
+const http = require('http').createServer(app)
+
 const connectDB = require("./database");
 
 // Middleware
@@ -31,11 +33,30 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
   try {
     console.log(`Server is running on http://localhost:${PORT}`);
+
     connectDB();
   } catch (err) {
     console.log("Unable to start server: " + err);
   }
+
+});
+
+// Live Chat
+const io = require('socket.io')(http,{
+  cors: {
+    origin: "http://localhost:3000"
+  }
+})
+
+io.on('connection',(socket)=>{
+  console.log("Socket Connected Succesfully")
+
+  socket.on('message',(msg)=>{
+    console.log(msg)
+    socket.broadcast.emit('message',msg)
+  })
+
 });
