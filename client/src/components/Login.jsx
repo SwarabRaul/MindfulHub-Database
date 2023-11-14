@@ -49,14 +49,12 @@ const Login = () => {
                 <label htmlFor="username">Username</label>
                 <input type="text"
                     value={username}
-                    required placeholder='Enter username'
                     onChange={(e) => setUsername(e.target.value)}
                 />
 
                 <label htmlFor="password">Password</label>
                 <input type="password"
                     value={password}
-                    required placeholder='Enter Password'
                     onChange={(e) => setPassword(e.target.value)}
 
                 />
