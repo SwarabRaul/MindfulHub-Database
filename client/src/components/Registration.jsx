@@ -21,6 +21,7 @@ const Registration = () => {
     if (response.status === 200) {
       // User registered successfully, you can show a success message or redirect to the login page
       // Example: window.location.href = '/login';
+      
       navigate('/questionnaireForm');
     } else {
       // Handle registration error
@@ -39,7 +40,6 @@ const Registration = () => {
 
             <input
               type="text"
-
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -47,7 +47,6 @@ const Registration = () => {
 
             <input
               type="email"
-
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -55,7 +54,6 @@ const Registration = () => {
 
             <input
               type="password"
-
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
