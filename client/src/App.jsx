@@ -10,6 +10,7 @@ import PostPage from "./components/PostPage";
 import BlogPage from "./components/BlogPage";
 import ResourcePage from "./components/ResourcePage";
 import Blog from "./components/Blog";
+import LiveChat from "./components/LiveChat";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/resources" element={<ResourcePage />} />
+          <Route path="/livechat" element = {<LiveChat />} />
         </Routes>
       </Router>
 
