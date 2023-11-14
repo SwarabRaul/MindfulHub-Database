@@ -6,7 +6,8 @@
     justify-content: space-between;
 
     height: 8vh;
-    background-color: #ddf9d2;
+    /* background-color: rgb(96, 180, 124), 110, 72, 0.577); */
+    background-color: #a3c7b9;
 }
 
 .navbar_header{

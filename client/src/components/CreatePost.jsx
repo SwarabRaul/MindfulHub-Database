@@ -41,6 +41,7 @@ const CreatePost = () => {
   return (
     <div className="createpost">
       <div className="createpost_container">
+        <div class="Post_box">
         <div className="createpost_left">
           <h1>Create a Post</h1>
           <h4>
@@ -85,6 +86,7 @@ const CreatePost = () => {
           >
             Post
           </button>
+        </div>
         </div>
       </div>
     </div>
