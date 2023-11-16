@@ -9,7 +9,6 @@ const Registration = () => {
   const navigate = useNavigate();
 
   const handleRegister = async () => {
-    // Send a POST request to your server to create a new user
     const response = await fetch("http://localhost:8081/user/register", {
       method: "POST",
       headers: {
@@ -19,12 +18,8 @@ const Registration = () => {
     });
 
     if (response.status === 200) {
-      // User registered successfully, you can show a success message or redirect to the login page
-      // Example: window.location.href = '/login';
-      
       navigate('/questionnaireForm');
     } else {
-      // Handle registration error
       console.error('Registration failed');
     }
   };
@@ -62,7 +57,6 @@ const Registration = () => {
                 Register
               </button>
             </div>
-            {/* Add a link to the login page */}
             <p>
               Already have an account?{" "}
               <span class="login" onClick={() => navigate("/login")}>
