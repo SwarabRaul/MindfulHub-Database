@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Registration.css'
+import '../styles/Registration.css';
 
 const Registration = () => {
   const [username, setUsername] = useState("");
@@ -25,10 +25,10 @@ const Registration = () => {
   };
 
   return (
-    <div class="bg1">
-      <div class="backdrop-filter">
-        <div div className="login-container">
-          <div class="login-form">
+    <div className="bg-container">
+      <div className="backdrop-filter">
+        <div className="registration-container">
+          <div className="registration-form">
             <h2>Register</h2>
 
             <label htmlFor="username">Username</label>
@@ -52,21 +52,23 @@ const Registration = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div class="btn">
-              <button class="register" onClick={handleRegister}>
+            <div className="btn-container">
+              <button className="register-button" onClick={handleRegister}>
                 Register
               </button>
             </div>
-            <p>
-              Already have an account?{" "}
-              <span class="login" onClick={() => navigate("/login")}>
+            <p className="login-p">
+              Already have an account?{' '}
+              <span className="login-link" onClick={() => navigate("/login")}>
                 Login here
               </span>
             </p>
           </div>
+          <div className="right-container">
+            <img src="Login_Background_3.jpg" alt="Background" />
+          </div>
         </div>
       </div>
-      /
     </div>
   );
 };
