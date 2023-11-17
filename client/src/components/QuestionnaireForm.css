@@ -1,14 +1,22 @@
-div {
+.Box_qn{  
+    
+    background-image: url(./images/qn_bg19.avif);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    /* background-position: center;   */
     margin-bottom: 30px;
+    margin-top: 15px;  
+    
 }
-
-form {
+.Form_qn {
+    background-color:rgb(240, 237, 233);
     max-width: 600px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 label {
@@ -17,10 +25,10 @@ label {
     margin-bottom: 10px;
 }
 
-label {
+/* label {
     display: block;
     margin-bottom: 10px;
-}
+} */
 
 label input {
     margin-right: 5px;
