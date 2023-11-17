@@ -3,25 +3,29 @@
     width: 70%;
     justify-content: space-evenly;
     text-align:center;
-   
-
-
     
+  
 }
-.backgrd{
+
+.backgrd
+{
     /* max-height: fit-content;
     max-width:90%;
     height: 100px; */
-    opacity: 0.85;
-    height: 600px;
+    /*opacity: 0.85;
+    /*height: 600px;
     /* margin-top:10px ; */
-    width: 100%;
+    /*width: 100%;
     /* margin-left: 60px; 
     margin-right: 60px;  */
-    padding-top: 80px;
-    background-image: url("./images/chatbg.jpeg"); 
+    /*padding-top: 80px;*/
+   /* background-image: url("./images/backgroundpic.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;  
+  width: 100%;
+  
+  
+  
   
 
 }
@@ -38,52 +42,135 @@ body{
 .btn_chat{
     margin-top: 3%;
     flex-direction: row;
-    padding:20px 10px 5px 20px;
+   /* padding:20px 10px 5px 20px; */
     width:100%;
     margin-left:20%;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    height: 80%;
+    background-image: url("./images/backgroundpic.jpg");
+    
     
    
 }
 .btn1{
-    background-color:aliceblue;
+  /*  background-color:aliceblue;
     color: black;
     font-weight: bold;
    width:30%;
    font-size: large;
    font-family: "Montserrat";
-   margin-right: 2%;
+   margin-right: 2%;*/
+   margin-right: 5px;
+
+   display: inline-block;
+  background-color:#a3c7b9 ; /* Light green color */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Montserrat";
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 
 }
 .btn1:hover{
-    background-color:rgb(155, 157, 158);
+   /* background-color:rgb(155, 157, 158);*/
+
+    background-color:#a3b991 ; /* Darker green on hover */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 
 }
-.btn2{
-    background-color:aliceblue;
+
+
+.btn1:active {
+    background-color: #507F28; /* Even darker green when clicked */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+  }
+
+  .btn2{
+    /*  background-color:aliceblue;
+      color: black;
+      font-weight: bold;
+     width:30%;
+     font-size: large;
+     font-family: "Montserrat";
+     margin-right: 2%;*/
+     margin-right: 5px;
+  
+     display: inline-block;
+    background-color:#a3c7b9 ; /* Light green color */
     color: black;
     font-weight: bold;
-   width:30%;
-   font-size: large;
-   font-family: "Montserrat";
-   margin-right: 2%;
-}
-.btn2:hover{
-    background-color:rgb(155, 157, 158);
-
-}
-.btn3{
-    background-color:aliceblue;
+    text-decoration: none;
+    font-size: large;
+    font-family: "Montserrat";
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  
+  }
+  .btn2:hover{
+     /* background-color:rgb(155, 157, 158);*/
+  
+      background-color:#a3b991 ; /* Darker green on hover */ 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  
+  }
+ 
+ 
+ .btn2:active {
+     background-color: #507F28; /* Even darker green when clicked */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transform: translateY(0);
+   }
+   .btn3{
+    /*  background-color:aliceblue;
+      color: black;
+      font-weight: bold;
+     width:30%;
+     font-size: large;
+     font-family: "Montserrat";
+     margin-right: 2%;*/
+     margin-right: 5px;
+  
+     display: inline-block;
+    background-color:#a3c7b9 ; /* Light green color */
     color: black;
     font-weight: bold;
-   width:30%;
-   font-size: large;
-   font-family: "Montserrat";
-}
-.btn3:hover{
-    background-color:rgb(155, 157, 158);
+    text-decoration: none;
+    font-size: large;
+    font-family: "Montserrat";
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  
+  }
+  .btn3:hover{
+     /* background-color:rgb(155, 157, 158);*/
+  
+      background-color:#a3b991 ; /* Darker green on hover */ 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  
+  }
+ 
+ 
+ .btn3:active {
+     background-color: #507F28; /* Even darker green when clicked */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transform: translateY(0);
+   }
 
-}
+
+
+
 /* button{
     background-color:aliceblue;
     color: black;
@@ -93,3 +180,51 @@ body{
    font-family: "Montserrat";
 
 } */
+.content{
+    margin-top: 3%;
+    flex-direction: row;
+    padding:20px 10px 5px 20px;
+    width:100%;
+    margin-left:20%;
+    justify-content: space-between;
+   
+}
+.name{
+    text-align: right;
+}
+
+.profile-pic {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    border-radius: 50%; /* Makes it a circle */
+    margin-right: 10px;
+}
+.chatbox2{
+    margin: auto;
+  width: 75%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.blog{
+    background-color: 	#fffafa;
+  border: 1px solid #cefdce;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+.blog:hover{
+    box-shadow: 16px 8px 16px 8px #c0c0c0; 
+    transform: translateY(0px);
+}
+h3{
+    font-family: 'Montserrat';
+    color: black;
+}
+h1{
+    font-size: 50px;
+}
+.name{
+    font-weight: bold;
+}
