@@ -42,8 +42,8 @@ const QuestionnaireForm = () => {
     };
 
     return (
-        <div>
-            <form>
+        <div className='Box_qn'>
+            <form className='Form_qn'>
                 {questions.map((question, index) => (
                     <div key={index}>
                         <label>{`${index + 1}. ${question}`}</label>
