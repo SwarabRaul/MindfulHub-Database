@@ -84,42 +84,44 @@ button+input {
 button:hover {
     background-color: #0056b3;
 } */
-.bg1{
-   
+.bg1 {
+
     height: 600px;
-    margin-top:10px ;
+    margin-top: 10px;
     width: 100%;
     margin-left: 60px;
     padding-top: 40px;
 }
-.backdrop-filter{
-     background-image: url("./images/b16.jpg"); 
+
+.backdrop-filter {
+    background-image: url("./images/b16.jpg");
     background-repeat: no-repeat;
-    background-size: contain; /* Cover the entire container while maintaining aspect ratio */
+    background-size: contain;
+    /* Cover the entire container while maintaining aspect ratio */
     /* background-position: center; */
     max-width: 70%;
-    max-height: 90%; 
+    max-height: 90%;
     /* justify-content: center; */
-   margin-left: 200px; 
- 
-  
-  /* background-size: 60%; */
-  /* z-index: 1; */
-  
-  /* padding: 1rem; */
-  /* background-color: aqua; */
-  /* backdrop-filter: blur(10px); */
-   display: flex;
-  flex-direction: column; 
-  box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2);
-  
+    margin-left: 200px;
+
+
+    /* background-size: 60%; */
+    /* z-index: 1; */
+
+    /* padding: 1rem; */
+    /* background-color: aqua; */
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2);
+
 
 
 }
 
 /* .bg2{
-     background-image: url("./images/b13.jpg"); 
-      background-repeat: no-repeat;
+    background-image: url("./images/b13.jpg"); 
+    background-repeat: no-repeat;
     height: 400px;
     margin-left: 80px;
     background-size: 40%;
@@ -137,14 +139,15 @@ button:hover {
     margin-left: 600px;
     padding-left: 30px;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    height:400px ;
-    padding-top:60px;
-    padding-bottom: 50px; 
-   max-height: 90%;
-    
-    
+    height: 400px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    max-height: 90%;
+
+
 }
-h2{
+
+h2 {
     text-align: center;
     font-family: 'Raleway';
 }
@@ -169,31 +172,35 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-.btn{
-    margin-bottom: 30px; 
+
+.btn {
+    margin-bottom: 30px;
     display: flex;
     padding-top: 20px;
     /* width:100%; */
     opacity: 0.8;
 }
+
 button {
-    background-color:forestgreen;
+    background-color: forestgreen;
     color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
     width: 30%;
-    
+
     /* margin-bottom: 10px; */
 }
-login{
-    width: 35%; 
+
+login {
+    width: 35%;
     margin-right: 80%;
-    
-} 
-.signup{
-     width:60%; 
+
+}
+
+.signup {
+    width: 60%;
     margin-left: 89px;
-    
-}  
+
+}
