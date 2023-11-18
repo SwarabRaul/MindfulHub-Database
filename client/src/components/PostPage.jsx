@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import "./PostPage.css";
+import "../styles/PostPage.css";
 
 const PostPage = () => {
   // get :id from nav
@@ -125,7 +125,7 @@ const PostPage = () => {
                 </div>
               );
             })}
-            
+
           </div>
         ) : (
           <h3>No Comments Found</h3>
