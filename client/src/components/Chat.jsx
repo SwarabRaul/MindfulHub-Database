@@ -22,76 +22,79 @@ const Chat = () => {
   }, []);
 
   return (
-    <div class="backgrd">
-      <div class="chatbox">
+    <div className="backgrd">
+      <div className="chatbox">
         {/* <img src="./images/gif1.gif" alt="Animated GIF" /> */}
-        <div class="btn_chat">
+        <div className="btn_chat">
           <h1>Chatroom</h1>
 
-          <button class="btn1" onClick={()=> navigate("/livechat")} >Live Chat</button>
+          <button className="btn1" onClick={() => navigate("/livechat")}>
+            Live Chat
+          </button>
           <button
-            class="btn2"
+            className="btn2"
             onClick={() => {
               navigate("/schedulechat");
             }}
-            // disabled={isDisabled}
+            disabled={isDisabled}
           >
             One on one help
           </button>
           <button
-            class="btn3"
+            className="btn3"
             onClick={() => {
               navigate("/createpost");
             }}
-            // disabled={isDisabled}
+            disabled={isDisabled}
           >
             Create a Post
           </button>
         </div>
-
-        {posts?.length !== 0 ? (
-          <>
-            {posts?.map((item) => {
-              return (
-                <div
-                  key={item._id}
-                  onClick={() => {
-                    navigate(`/${item._id}`);
-                  }}
-                >
-                  <h1>{item.title}</h1>
-                  <h3>{item.message}</h3>
-                </div>
-              );
-            })}
-          </>
-        ) : (
-          <h1>No post Found</h1>
-        )}
-
         <div className="content">
-          <div class="blog">
+          {posts?.length !== 0 ? (
+            <>
+              {posts?.map((item) => {
+                return (
+                  <div className="blog"
+                    key={item._id}
+                    onClick={() => {
+                      navigate(`/${item._id}`);
+                    }}
+                  >
+                    <h3>{item.title}</h3>
+                    <p>{item.message}</p>
+                  </div>
+                );
+              })}
+            </>
+          ) : (
+            <h1>No post Found</h1>
+          )}
+        </div>
+
+        {/* <div className="content">
+          <div className="blog">
             <h3>The Art of Minimilistic Living</h3>
             <p>
               Expore the principles of minimilistic living, decluttering your
               space and simplifying your life. Learn how to create a serene and
               organised home that promotes peace and mindfulness.
-              <p class="name">~Emily Johnson </p>
+              <p className="name">~Emily Johnson </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Mastering the Basics of Healthy Cooking</h3>
             <p>
               If your looking to improve your culinary skills and adopt a
               healthier lifestyle, this blog post is for you. Learn about
               essential cooking techniques, ingredient substitutions and simple
               recipies to kickstart your journey towards better nutrition.
-              <p class="name">~Daniel Rodriguez </p>
+              <p className="name">~Daniel Rodriguez </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Be More with Less</h3>
             <p>
               Founded by Courtney Carver, Be More with Less is a blog about
@@ -102,11 +105,11 @@ const Chat = () => {
               from a multiple sclerosis diagnosis to feeling the best she’s felt
               in decades. And she went from being deep in debt and clutter to
               living debt- and clutter-free.
-              <p class="name">~Jasmine Patel </p>
+              <p className="name">~Jasmine Patel </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Simply + Fiercely</h3>
             <p>
               This is a blog about how to recover from a life that looks good on
@@ -114,11 +117,11 @@ const Chat = () => {
               taking control of your life and clearing out the clutter. It’s
               about being honest with yourself, listening to your heart, doing
               more of what you love, and learning to let go of all the rest.
-              <p class="name">~Michelle Lee </p>
+              <p className="name">~Michelle Lee </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Rowdy Kittens</h3>
             <p>
               Rowdy Kittens is a blog created by Tammy Strobel, writer,
@@ -130,11 +133,11 @@ const Chat = () => {
               400-square-foot studio where Tammy happily works as a web designer
               and freelance writer. She owns four plates, three pairs of shoes,
               and two pots.
-              <p class="name">~Ava Smith </p>
+              <p className="name">~Ava Smith </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Practicing Simplicity</h3>
             <p>
               Practising Simplicity, established in 2008 by Jodi Wislon, is a
@@ -142,11 +145,11 @@ const Chat = () => {
               home, simple living, and good intentions. It covers a range of
               topics including the family home, motherhood, yoga, pregnancy,
               photography, travel, and lifestyle.
-              <p class="name">~Noah Chang </p>
+              <p className="name">~Noah Chang </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Raising Simple</h3>
             <p>
               Raising Simple is the creation of Zoë Kim, author of the book
@@ -156,11 +159,11 @@ const Chat = () => {
               lifestyle through positive perspective changes and practical
               solutions. Her goal is to help you find the best solution to
               simplify your home and life.
-              <p class="name">~Maya Patel </p>
+              <p className="name">~Maya Patel </p>
             </p>
           </div>
 
-          <div class="blog">
+          <div className="blog">
             <h3>Tiny Ambitions</h3>
             <p>
               Tiny Ambitions is a blog and podcast about living a tiny, simple,
@@ -169,10 +172,10 @@ const Chat = () => {
               Britt, a freelance writer, who writes about minimalism,
               decluttering, simple living, lifestyle, relationships, health &
               wellbeing, tiny houses, and sustainable living.
-              <p class="name">~Olivia Bennett </p>
+              <p className="name">~Olivia Bennett </p>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

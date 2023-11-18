@@ -6,9 +6,9 @@ import Login from './components/Login';
 import Registration from './components/Registration';
 import QuestionnaireForm from './components/QuestionnaireForm';
 import Chat from './components/Chat';
-import ResourcePage from './components/ResourcePage';
 import CreatePost from './components/CreatePost';
 import PostPage from './components/PostPage';
+// import ResourcePage from './components/ResourcePage';
 import Blog from './components/Blog';
 import BlogPage from './components/BlogPage';
 import LiveChat from './components/LiveChat'
@@ -30,7 +30,7 @@ function App() {
           <Route path="/:id" element={<PostPage />} />
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/resources" element={<ResourcePage />} />
+          {/* <Route path="/resources" element={<ResourcePage />} /> */}
           <Route path="/questionnaireForm" element={<QuestionnaireForm />} />
           <Route path="/livechat" element={<LiveChat />} />
         </Routes>
