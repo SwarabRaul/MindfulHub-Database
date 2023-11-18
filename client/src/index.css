@@ -8,6 +8,8 @@ body {
     line-height: 1.6;
     background-color: #F5FDF4;
     color: #5c5c5c;
+
+    overflow-x: hidden;
 }
 
 h1,
