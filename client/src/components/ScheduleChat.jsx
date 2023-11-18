@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ScheduleChat.css';
+// import './ScheduleChat.css';
 
 const ScheduleChat = () => {
     const [user, setUser] = useState('');

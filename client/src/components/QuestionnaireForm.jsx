@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ButtonComponent from './ButtonComponent';
-import './QuestionnaireForm.css'
+// import './QuestionnaireForm.css'
 
 const QuestionnaireForm = () => {
     const [formData, setFormData] = useState({

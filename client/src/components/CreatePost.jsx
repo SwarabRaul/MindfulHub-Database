@@ -1,4 +1,4 @@
-import "./CreatePost.css";
+// import './CreatePost.css';
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 

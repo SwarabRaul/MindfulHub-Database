@@ -1,7 +1,7 @@
 import React from 'react';
 import Testimonial from './Testimonial';
 import { useNavigate } from 'react-router-dom';
-import './LandingPage.css'
+// import './LandingPage.css'
 
 const LandingPage = () => {
 
