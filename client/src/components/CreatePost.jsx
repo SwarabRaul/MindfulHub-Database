@@ -16,7 +16,6 @@ const CreatePost = () => {
   useEffect(() => {
     document.title = "Create Post";
     // background color
-    document.body.style.backgroundColor = "#ddf9d2";
     localStorage.getItem("token")
       ? setId(localStorage.getItem("token"))
       : setId("");

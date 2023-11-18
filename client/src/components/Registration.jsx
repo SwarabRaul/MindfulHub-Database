@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Registration.css';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Registration.css";
 
 const Registration = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Registration";
+  }, []);
 
   const handleRegister = async () => {
     const response = await fetch("http://localhost:8081/user/register", {
@@ -18,9 +22,9 @@ const Registration = () => {
     });
 
     if (response.status === 200) {
-      navigate('/questionnaireForm');
+      navigate("/questionnaireForm");
     } else {
-      console.error('Registration failed');
+      console.error("Registration failed");
     }
   };
 
@@ -57,12 +61,12 @@ const Registration = () => {
                 Register
               </button>
             </div>
-            <p className="login-p">
-              Already have an account?{' '}
-              <span className="login-link" onClick={() => navigate("/login")}>
+            <div className="loginLink">
+              <p className="login-p">Already have an account? </p>
+              <div className="login-link" onClick={() => navigate("/login")}>
                 Login here
-              </span>
-            </p>
+              </div>
+            </div>
           </div>
           <div className="right-container">
             <img src="Login_Background_3.jpg" alt="Background" />
