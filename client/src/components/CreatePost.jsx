@@ -1,4 +1,6 @@
 // import './CreatePost.css';
+import '../styles/CreatePost.css';
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -40,10 +42,10 @@ const CreatePost = () => {
   return (
     <div className="createpost">
       <div className="createpost_container">
-        <div class="Post_box">
+        <div className="Post_box">
         <div className="createpost_left">
           <h1>Create a Post</h1>
-          <h4>
+          <h4 >
             Create a post on any topic related to mental well being whether it
             is to get some help, help someone, or ask questions.
           </h4>
@@ -65,18 +67,23 @@ const CreatePost = () => {
             }}
           ></textarea>
           <div className="createpost_right_checkbox">
+          <div className="checkbox-container">
             <input
+             
               type="checkbox"
               name="anonymous"
               id="anonymous"
               value={data.isAnonymous}
               onChange={() => {
                 setDate({ ...data, isAnonymous: !data.isAnonymous });
+
               }}
             />
-            <label htmlFor="anonymous">Post Anonymously</label>
+            <label className='sm' htmlFor="anonymous">Post Anonymously</label>
+
+</div>
           </div>
-          <button
+          <button className='btn2'
             onClick={() => {
               localStorage.getItem("token")
                 ? handleClick()
