@@ -1,0 +1,70 @@
+.Box_qn{  
+    background-color: white;
+    padding-bottom: 20px;
+    /* background-image: url(./images/qn_bg19.avif);
+    background-repeat: no-repeat; 
+    background-size:cover;
+    /* background-position: center;   
+    margin-bottom: 30px;
+    margin-top: 15px;   */
+    
+}
+
+.Heading_qn{
+    text-align: center;
+    background-color: antiquewhite;
+    margin-top:30px;
+    margin-left: 19%;
+    margin-right: 19%;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: "Monzerat";
+}
+
+.Form_qn {
+    background: linear-gradient(to right, #80dc8d, #dbee91); 
+    margin-left: 19%;
+    margin-right: 19%;
+    padding: 50px; 
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.div_qn{
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 40px;  
+    font-family: "raleway";
+   
+}
+
+ label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+} 
+
+
+label input {
+    margin-right: 5px;
+}
+
+.btn_qn{
+   margin-left: 35%;
+    background-color:forestgreen;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.btn_qn:hover{
+    background-color:cornsilk;
+    color:black;
+    
+}
