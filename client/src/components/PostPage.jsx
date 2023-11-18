@@ -78,12 +78,24 @@ const PostPage = () => {
     }
   };
 
+  const handleDeletePost = () => {
+    fetch(`http://localhost:8081/post/delete/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        window.location.replace("/chat");
+      });
+  }
+
   return (
     <div>
       <div className="postContainer">
         <h1>{postData?.post?.title}</h1>
         <p>{postData?.post?.message}</p>
         <h5>Post by: {user}</h5>
+        {postData?.post?.user === userid && <button className="postPageDelete" onClick={handleDeletePost} >Delete</button>}
       </div>
       {/* <hr /> */}
       <div className="commentContainer">
@@ -100,6 +112,7 @@ const PostPage = () => {
               }))
             }
           />
+          
           <input
             type="checkbox"
             value={newComment.isAnonymous}
