@@ -36,18 +36,31 @@
     font-size: larger;
     padding-top: 0px;
 }
-.btn_chat{
+.chat{
     margin-top: 3%;
     flex-direction: row;
    /* padding:20px 10px 5px 20px; */
     width:100%;
     margin-left:20%;
     justify-content: space-evenly;
-    height: 80%;
+    height: 150px;
     background-image: url("./images/backgroundpic.jpg");
+    background-color: #C7EFCF;
+    padding-top: 50px;
     
     
    
+}
+.btn_chat{
+  margin-top: 3%;
+  flex-direction: row;
+ /* padding:20px 10px 5px 20px; */
+  width:100%;
+  margin-left:20%;
+  justify-content: space-evenly;
+  height: 80%;
+  background-image: url("./images/backgroundpic.jpg");
+
 }
 .btn1{
   /*  background-color:aliceblue;
