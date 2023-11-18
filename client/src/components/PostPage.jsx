@@ -22,6 +22,7 @@ const PostPage = () => {
   });
 
   useEffect(() => {
+    document.title = "Post Page"
     localStorage.getItem("token")
       ? setuserid(localStorage.getItem("token"))
       : setuserid("");

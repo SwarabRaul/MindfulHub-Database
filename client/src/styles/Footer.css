@@ -5,7 +5,8 @@ body {
     padding: 0;
 }
 
-.footer {
+.footer {  
+    margin-top: 40px;
 
     background-color: #b4c8b1;
     color: #333333;

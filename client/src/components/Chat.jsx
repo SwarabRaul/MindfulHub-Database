@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import './Chat.css';
+import '../styles/Chat.css';
 
 const Chat = () => {
   const navigate = useNavigate();
@@ -10,7 +10,6 @@ const Chat = () => {
 
   useEffect(() => {
     document.title = "Chat";
-    document.body.style.backgroundColor = "#ffffff";
 
     localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true);
 

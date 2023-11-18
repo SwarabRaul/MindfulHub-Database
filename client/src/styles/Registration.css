@@ -79,6 +79,7 @@ input {
 .login-p {
     font-size: 0.9em;
     margin-top: 10px;
+    margin-bottom: 10px;
     display: inline;
 }
 
@@ -87,6 +88,16 @@ input {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
+}
+
+.loginLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginLink p{
+    margin-right: 10px;
+
 }
 
 .login-link:hover {
