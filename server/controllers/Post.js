@@ -45,4 +45,25 @@ const createComment = async(req,res) => {
     }
 }
 
-module.exports = { getPost, createPost, getPostById, createComment }
+const deletePost = async(req,res) => {
+    try {
+        const post = await Post.findByIdAndDelete(req.params.id);
+        res.status(200).json(post);
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({message: "Internal Server Error"})
+    }
+}
+
+const deleteComment = async(req,res) => {
+    try {
+        const comment = await Comment.findByIdAndDelete(req.params.id);
+        res.status(200).json(comment);
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({message: "Internal Server Error"})
+    }
+}
+
+
+module.exports = { getPost, createPost, getPostById, createComment, deletePost, deleteComment }
