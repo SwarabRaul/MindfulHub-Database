@@ -10,7 +10,7 @@ import Chat from './components/Chat';
 import PostPage from './components/PostPage';
 import QuestionnaireForm from './components/QuestionnaireForm';
 import BlogPage from './components/BlogPage';
-import ResourcePage from './components/ResourcePage';
+// import ResourcePage from './components/ResourcePage';
 import Blog from './components/Blog';
 import LiveChat from './components/LiveChat'
 
@@ -29,7 +29,7 @@ function App() {
           <Route path="/:id" element={<PostPage />} />
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/resources" element={<ResourcePage />} />
+          {/* <Route path="/resources" element={<ResourcePage />} /> */}
           <Route path="/questionnaireForm" element={<QuestionnaireForm />} />
           <Route path="/livechat" element={<LiveChat />} />
         </Routes>

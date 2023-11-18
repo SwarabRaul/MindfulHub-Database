@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./Navbar.css";
 
 import { Link, NavLink } from "react-router-dom";
@@ -32,9 +31,9 @@ const Navbar = () => {
         <li>
           <NavLink to="/blog">BLOGS</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/resources">RESOURCES</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/chat">CHAT</NavLink>
         </li>
