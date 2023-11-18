@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ButtonComponent from './ButtonComponent';
-//  import '../styles/QuestionnaireForm.css'
+import './../styles/QuestionnaireForm.css'
+
 
 const QuestionnaireForm = () => {
     const [formData, setFormData] = useState({
@@ -30,7 +31,6 @@ const QuestionnaireForm = () => {
         "Have you recently been feeling unhappy and depressed?",
         "Have you recently been losing confidence in yourself?",
     ];
-     // Define options for each question
      const options = [
         ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
         ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
@@ -51,10 +51,8 @@ const QuestionnaireForm = () => {
         }));
     };
     const handleSubmit = () => {
-        // Calculate total points (you might want to adjust this based on your specific scoring logic)
         const totalPoints = Object.values(formData).reduce((acc, value) => acc + calculatePoints(value), 0);
 
-        // Determine mental status based on total points (adjust as needed)
         let status;
         if (totalPoints >= 50) {
             status = "Congratulations on your outstanding performance in the mental test! Your results are truly exceptional, reflecting a high level of intelligence and proficiency. Your strengths shine through, showcasing your impressive capabilities. Keep up the exceptional work, and consider using your talents to explore new challenges and opportunities. The sky's the limit for someone with your remarkable abilities!";
@@ -64,15 +62,11 @@ const QuestionnaireForm = () => {
             status = "Congratulations on completing the mental test! Your results indicate that you have many strengths, and your performance is solid overall. Like everyone, there are areas where you can further enhance your skills, and that's a wonderful opportunity for growth. Focus on those specific points for improvement, and remember that progress is a journey. Your current achievements are commendable, and with a bit of targeted effort, you'll undoubtedly excel even more.You can use this website to achieve or to improve your overall wellness.Keep up the great work!";
         } else {
             status = "While the results of your mental test may not be what you were hoping for, remember that everyone faces challenges.You can use this website as an opportunity for self-reflection and growth. Identify specific areas that need improvement and create a plan to address them. Remember that setbacks are a natural part of the learning process. Seek support, whether from peers, mentors, or resources, and approach this as a chance to learn and improve. You have the resilience to turn things around with dedication and effort. Keep moving forward!";
-        }
 
-        // Set the mental status in the state and mark the form as submitted
         setMentalStatus(status);
         setFormSubmitted(true);
     };
     const calculatePoints = (value) => {
-        // You can customize this function to assign different points for each option
-        // For example, you might assign higher points to "Strongly Agree" and lower points to "Strongly Disagree"
         switch (value) {
             case "Strongly Agree ":
                 return 1;
@@ -89,21 +83,15 @@ const QuestionnaireForm = () => {
         }
     };
 
-    // const handleSubmit = async () => {
-
-    // };
-
     return (
-       
+
         <div className='Box_qn'>
-            <div className='Heading_qn'>
                 <h1>Test</h1>
-                <p>
-                    Your mental well-being is important to us. 
+                <h4>
+                    Your mental well-being is important to us.
                     Please take a moment to answer the following questions to help us provide you with relevant information and support.
                     Your responses are completely anonymous.
-                </p>
-            </div>
+                </h4>
             <form className='Form_qn'>
                 {questions.map((question, index) => (
                     <div key={index} className='div_qn'>
@@ -120,6 +108,7 @@ const QuestionnaireForm = () => {
                                 {option}
                             </label>
                         ))}
+                         <hr />
                     </div>
                 ))}
 

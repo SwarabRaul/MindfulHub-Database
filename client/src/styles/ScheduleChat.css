@@ -1,127 +1,115 @@
- .box{
-    background-image: url("./images/sched_chatbg.jpg"); 
-    background-repeat: no-repeat;
-    background-size:cover; 
-
-    /* opacity: 0.8; */
-    height:70px ;  
-    padding-top: 11vh;
-    padding-right: 10px;
-    padding-bottom: 60vh;
-    width: 100%;
-  /* backdrop-filter: blur(50px);  */
-    /* filter: blur(10px); */
-    display: flex;
-    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2);
-    
-
-} 
-
-
-.schedulechat {
-    position: relative;
-    height: calc(100vh - 8vh - 5vh);
-    width: 100vw;
-    background-color: #fdfffd;
-    display: flex;
-    /* box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2); */
-}
-
-
 .schedulechat_container {
     display: flex;
-    flex-direction: row;
-    margin: 0 auto;
     align-items: center;
-    margin-top: 7vh;
-    background-color: white;
-    height: 70vh;
-    width: 80vw;
+    justify-content: center;
+    height: 512px;
+    margin-top: 24px;
+    margin-bottom: 30px;
 }
 
-/* .schedulechat_left,
-.schedulechat_right {
-    width: 50%;
-} */
+.box {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    margin: auto;
+    background-color: #b4c8b1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
 
 .schedulechat_left {
-    margin: 5vw;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.schedulechat_left h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 2vh;
-    /* position: absolute; */
-    /* transform: translate(-50%,-50%); */
-  
+.schedulechat_left img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
-.schedulechat_left h4 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 2vh;
-    margin-left:10px;
-    font-weight:bolder;
-    /* position: absolute; */
-    /* transform: translate(-50%,-50%); */
-  
-    
+.left-content {
+    text-align: center;
 }
 
 .schedulechat_right {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0 8px 8px 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.schedulechat_right input[type="text"],
-.schedulechat_right input[type="datetime-local"] {
-    width: 80%;
-    height: 5vh;
-    margin-bottom: 2vh;
-    border: 3px solid  #a3c7b9;;
-    border-radius: 5px;
-    padding: 0 1vw;
+.form-group {
+    margin-bottom: 12px;
+    width: 100%;
 }
 
-.schedulechat_right input[type="text"]:focus,
-.schedulechat_right input[type="datetime-local"]:focus,
-.schedulechat_right textarea:focus {
-    outline: none;
+label {
+    display: block;
+    margin-bottom: 2px;
+    color: #5c5c5c;
 }
 
-.schedulechat_right textarea {
-    width: 80%;
-    height: 15vh;
-    margin-bottom: 2vh;
-    border: 3px solid  #a3c7b9;;
-    border-radius: 5px;
-    padding: 1vh 1vw;
-    font-family: "Montserrat";
+input,
+textarea {
+    width: 250%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.schedulechat_right textarea::placeholder,
-.schedulechat_right input[type="text"]::placeholder,
-.schedulechat_right input[type="datetime-local"]::placeholder {
-    font-family: "Montserrat";
-    font-size: 1rem;
-    font-weight: 300;
+textarea {
+    height: 100px;
+    resize: none;
 }
 
-.schedulechat_right button {
-    border: 4px solid  #a3c7b9;;
-    border-radius: 5px;
-    height: 6vh;
-    width: 10vw;
-    background-color: white;
+.submit {
+    font-family: 'Raleway';
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    color: black;
-    text-align: center;
-    font-family: "Montserrat";
-} 
-/* .submit{
-     padding-bottom:10px ; 
-    margin-bottom: 10px;
-} */
+    color: #fff;
+    background-color: #678c70;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #9a7864;
+}
+
+@media (max-width: 768px) {
+    .schedulechat_left {
+        display: none;
+    }
+
+    .schedulechat_right {
+        flex: 1;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .schedulechat_right img {
+        display: none;
+    }
+}

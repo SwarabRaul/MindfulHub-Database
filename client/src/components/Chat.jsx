@@ -24,8 +24,11 @@ const Chat = () => {
     <div className="backgrd">
       <div className="chatbox">
         {/* <img src="./images/gif1.gif" alt="Animated GIF" /> */}
-        <div className="btn_chat">
-          <h1>Chatroom</h1>
+        <div className="chat">
+          <h1>ChatRoom</h1>
+          <h3>Secure place to ask for help or help others.</h3>
+          </div>
+          <div className="btn_chat">
 
           <button className="btn1" onClick={() => navigate("/livechat")}>
             Live Chat
@@ -48,7 +51,8 @@ const Chat = () => {
           >
             Create a Post
           </button>
-        </div>
+          </div>
+        
         <div className="content">
           {posts?.length !== 0 ? (
             <>
