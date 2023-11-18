@@ -4,15 +4,15 @@ import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Registration from './components/Registration';
-import CreatePost from './components/CreatePost';
-import ScheduleChat from './components/ScheduleChat';
-import Chat from './components/Chat';
-import PostPage from './components/PostPage';
 import QuestionnaireForm from './components/QuestionnaireForm';
-import BlogPage from './components/BlogPage';
+import Chat from './components/Chat';
 import ResourcePage from './components/ResourcePage';
+import CreatePost from './components/CreatePost';
+import PostPage from './components/PostPage';
 import Blog from './components/Blog';
 import LiveChat from './components/LiveChat'
+import ScheduleChat from './components/ScheduleChat';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
           <Route path="/questionnaireForm" element={<QuestionnaireForm />} />
           <Route path="/livechat" element={<LiveChat />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
