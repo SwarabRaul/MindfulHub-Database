@@ -85,7 +85,7 @@ const PostPage = () => {
         <p>{postData?.post?.message}</p>
         <h5>Post by: {user}</h5>
       </div>
-      <hr />
+      {/* <hr /> */}
       <div className="commentContainer">
         <h2>Comments</h2>
         <div className="inputContainer">
@@ -121,8 +121,8 @@ const PostPage = () => {
             {comments?.map((comment) => {
               return (
                 <div className="comment" key={comment._id}>
-                  <h6 className="commentAuthor" >{comment.isAnonymous ? "Anonymous" : comment.user} : </h6>
-                  <h5 className="commentMessage" >{comment.message}</h5>
+                  <h5 className="commentAuthor" >{comment.isAnonymous ? "Anonymous" : comment.user} : </h5>
+                  <h4 className="commentMessage" >{comment.message}</h4>
                 </div>
               );
             })}
@@ -132,6 +132,7 @@ const PostPage = () => {
           <h3>No Comments Found</h3>
         )}
       </div>
+      
     </div>
   );
 };
