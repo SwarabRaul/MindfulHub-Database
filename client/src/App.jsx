@@ -10,6 +10,7 @@ import ResourcePage from './components/ResourcePage';
 import CreatePost from './components/CreatePost';
 import PostPage from './components/PostPage';
 import Blog from './components/Blog';
+import BlogPage from './components/BlogPage';
 import LiveChat from './components/LiveChat'
 import ScheduleChat from './components/ScheduleChat';
 import Footer from './components/Footer';
