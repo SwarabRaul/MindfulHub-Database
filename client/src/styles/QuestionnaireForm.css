@@ -1,70 +1,61 @@
-.Box_qn{  
-    background-color: white;
-    padding-bottom: 20px;
-    /* background-image: url(./images/qn_bg19.avif);
-    background-repeat: no-repeat; 
-    background-size:cover;
-    /* background-position: center;   
-    margin-bottom: 30px;
-    margin-top: 15px;   */
-    
+.Box_qn h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 900;
 }
 
-.Heading_qn{
+.Box_qn h4 {
     text-align: center;
-    background-color: antiquewhite;
-    margin-top:30px;
-    margin-left: 19%;
-    margin-right: 19%;
-    margin-bottom: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
-    font-family: "Monzerat";
+    width: 70vw;
+    margin: 0 auto;
+
+    margin-bottom: 50px;
 }
+
 
 .Form_qn {
-    background: linear-gradient(to right, #80dc8d, #dbee91); 
-    margin-left: 19%;
-    margin-right: 19%;
-    padding: 50px; 
-    border-radius: 10px;
-    align-items: center;
-
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #fffafa;
+    border: 1px solid #cefdce;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .div_qn{
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    margin-bottom: 40px;  
-    font-family: "raleway";
-   
+    width: 95%;
+    margin:0 auto;
+    margin-bottom: 20px;
 }
 
- label {
+label {
     display: block;
     font-size: 16px;
     margin-bottom: 10px;
-} 
+    margin-left: 90px;
+}
 
 
 label input {
-    margin-right: 5px;
+    margin-top: 10px;
+    margin-right: -170px;
+    margin-left: -170px;
 }
 
-.btn_qn{
-   margin-left: 35%;
-    background-color:forestgreen;
+.btn_qn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     color: #fff;
-    border-radius: 20px;
-    padding: 10px;
+    background-color: #678c70;
+    transition: background-color 0.3s ease;
+    margin: 0 340px;
 }
 
-.btn_qn:hover{
-    background-color:cornsilk;
-    color:black;
-    
-}
+
+.btn_qn:hover {
+    background-color: #9a7864;
+} 
