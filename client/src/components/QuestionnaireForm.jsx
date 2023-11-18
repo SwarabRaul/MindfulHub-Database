@@ -42,10 +42,19 @@ const QuestionnaireForm = () => {
     };
 
     return (
+       
         <div className='Box_qn'>
+            <div className='Heading_qn'>
+                <h1>Test</h1>
+                <p>
+                    Your mental well-being is important to us. 
+                    Please take a moment to answer the following questions to help us provide you with relevant information and support.
+                    Your responses are completely anonymous.
+                </p>
+            </div>
             <form className='Form_qn'>
                 {questions.map((question, index) => (
-                    <div key={index}>
+                    <div key={index} className='div_qn'>
                         <label>{`${index + 1}. ${question}`}</label>
                         {[1, 2, 3, 4, 5].map((value) => (
                             <label key={value}>
@@ -61,10 +70,10 @@ const QuestionnaireForm = () => {
                     </div>
                 ))}
 
-                <ButtonComponent onClick={handleSubmit} />
-                {/* <button type="button" onClick={handleSubmit}>
+                {/* <ButtonComponent  onClick={handleSubmit} /> */}
+                <button className="btn_qn" type="button" onClick={handleSubmit}>
                     Submit
-                </button> */}
+                </button>
             </form>
         </div>
     );
