@@ -14,7 +14,7 @@ const CreatePost = () => {
   const [id, setId] = useState("");
 
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     document.title = "Create Post";
     // background color
@@ -24,7 +24,7 @@ const CreatePost = () => {
   }, []);
 
   const handleClick = () => {
-    fetch("http://localhost:8081/post/create", {
+    fetch("https://mindfulhub-database.onrender.com/post/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const CreatePost = () => {
       body: JSON.stringify({ ...data, user: id }),
       credentials: "include",
     }).then((res) => {
-      if(res.status===200){
+      if (res.status === 200) {
         alert("Post Created Successfully")
         navigate('/chat')
       }
@@ -43,56 +43,56 @@ const CreatePost = () => {
     <div className="createpost">
       <div className="createpost_container">
         <div className="Post_box">
-        <div className="createpost_left">
-          <h1>Create a Post</h1>
-          <h4 >
-            Create a post on any topic related to mental well being whether it
-            is to get some help, help someone, or ask questions.
-          </h4>
-        </div>
-        <div className="createpost_right">
-          <input
-            type="text"
-            placeholder="Title"
-            value={data.title}
-            onChange={(event) => {
-              setDate({ ...data, title: event.target.value });
-            }}
-          />
-          <textarea
-            placeholder="Description"
-            value={data.message}
-            onChange={(event) => {
-              setDate({ ...data, message: event.target.value });
-            }}
-          ></textarea>
-          <div className="createpost_right_checkbox">
-          <div className="checkbox-container">
+          <div className="createpost_left">
+            <h1>Create a Post</h1>
+            <h4 >
+              Create a post on any topic related to mental well being whether it
+              is to get some help, help someone, or ask questions.
+            </h4>
+          </div>
+          <div className="createpost_right">
             <input
-             
-              type="checkbox"
-              name="anonymous"
-              id="anonymous"
-              value={data.isAnonymous}
-              onChange={() => {
-                setDate({ ...data, isAnonymous: !data.isAnonymous });
-
+              type="text"
+              placeholder="Title"
+              value={data.title}
+              onChange={(event) => {
+                setDate({ ...data, title: event.target.value });
               }}
             />
-            <label className='sm' htmlFor="anonymous">Post Anonymously</label>
+            <textarea
+              placeholder="Description"
+              value={data.message}
+              onChange={(event) => {
+                setDate({ ...data, message: event.target.value });
+              }}
+            ></textarea>
+            <div className="createpost_right_checkbox">
+              <div className="checkbox-container">
+                <input
 
-</div>
+                  type="checkbox"
+                  name="anonymous"
+                  id="anonymous"
+                  value={data.isAnonymous}
+                  onChange={() => {
+                    setDate({ ...data, isAnonymous: !data.isAnonymous });
+
+                  }}
+                />
+                <label className='sm' htmlFor="anonymous">Post Anonymously</label>
+
+              </div>
+            </div>
+            <button className='btn2'
+              onClick={() => {
+                localStorage.getItem("token")
+                  ? handleClick()
+                  : alert("Please Login to create a post");
+              }}
+            >
+              Post
+            </button>
           </div>
-          <button className='btn2'
-            onClick={() => {
-              localStorage.getItem("token")
-                ? handleClick()
-                : alert("Please Login to create a post");
-            }}
-          >
-            Post
-          </button>
-        </div>
         </div>
       </div>
     </div>

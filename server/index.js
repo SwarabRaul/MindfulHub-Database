@@ -11,7 +11,7 @@ const connectDB = require("./database");
 // Middleware
 app.use(
   cors({
-    origin: ["http://127.0.0.1:3000", "http://localhost:3000"],
+    origin: ["http://127.0.0.1:3000", "http://localhost:3000", "https://mindful-hub-database.vercel.app"],
     credentials: true, // Allow credentials (e.g., cookies)
   })
 );
@@ -45,18 +45,18 @@ http.listen(PORT, () => {
 });
 
 // Live Chat
-const io = require('socket.io')(http,{
+const io = require('socket.io')(http, {
   cors: {
-    origin: "http://localhost:3000"
+    origin: ["http://127.0.0.1:3000", "http://localhost:3000", "https://mindful-hub-database.vercel.app"]
   }
 })
 
-io.on('connection',(socket)=>{
+io.on('connection', (socket) => {
   console.log("Socket Connected Succesfully")
 
-  socket.on('message',(msg)=>{
+  socket.on('message', (msg) => {
     console.log(msg)
-    socket.broadcast.emit('message',msg)
+    socket.broadcast.emit('message', msg)
   })
 
 });

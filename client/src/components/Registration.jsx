@@ -13,7 +13,7 @@ const Registration = () => {
   }, []);
 
   const handleRegister = async () => {
-    const response = await fetch("http://localhost:8081/user/register", {
+    const response = await fetch("https://mindfulhub-database.onrender.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

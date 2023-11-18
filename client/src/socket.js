@@ -1,8 +1,8 @@
 import { io } from 'socket.io-client';
 
-const URL = 'http://localhost:8081';
+const URL = 'https://mindfulhub-database.onrender.com';
 
-export const socket = io(URL,{
+export const socket = io(URL, {
     autoConnect: false,
     timeout: 60000
 });

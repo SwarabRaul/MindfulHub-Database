@@ -13,7 +13,7 @@ const Chat = () => {
 
     localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true);
 
-    fetch("http://localhost:8081/post")
+    fetch("https://mindfulhub-database.onrender.com/post")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -27,8 +27,8 @@ const Chat = () => {
         <div className="chat">
           <h1>ChatRoom</h1>
           <h3>Secure place to ask for help or help others.</h3>
-          </div>
-          <div className="btn_chat">
+        </div>
+        <div className="btn_chat">
 
           <button className="btn1" onClick={() => navigate("/livechat")}>
             Live Chat
@@ -51,8 +51,8 @@ const Chat = () => {
           >
             Create a Post
           </button>
-          </div>
-        
+        </div>
+
         <div className="content">
           {posts?.length !== 0 ? (
             <>
@@ -75,7 +75,7 @@ const Chat = () => {
           )}
         </div>
 
-        
+
       </div>
     </div>
   );

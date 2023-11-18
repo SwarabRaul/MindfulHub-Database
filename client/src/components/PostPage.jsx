@@ -29,14 +29,14 @@ const PostPage = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8081/post/${id}`);
+        const response = await fetch(`https://mindfulhub-database.onrender.com/post/${id}`);
         const postData = await response.json();
         setPostData(postData);
         setComments(postData.comments);
 
         if (!postData.post.isAnonymous) {
           const userResponse = await fetch(
-            `http://localhost:8081/user/${postData.post.user}`
+            `https://mindfulhub-database.onrender.com/user/${postData.post.user}`
           );
           const userData = await userResponse.json();
           setUser(userData.username);
@@ -44,7 +44,7 @@ const PostPage = () => {
           setUser("Anonymous");
         }
 
-        const res = await fetch(`http://localhost:8081/user/${userid}`);
+        const res = await fetch(`https://mindfulhub-database.onrender.com/user/${userid}`);
         const data = await res.json();
         // console.log(data);
         setCommenter(data.username);
@@ -58,7 +58,7 @@ const PostPage = () => {
 
   const handleComment = async () => {
     if (userid) {
-      const response = await fetch("http://localhost:8081/post/comment", {
+      const response = await fetch("https://mindfulhub-database.onrender.com/post/comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const PostPage = () => {
   };
 
   const handleDeletePost = () => {
-    fetch(`http://localhost:8081/post/delete/${id}`, {
+    fetch(`https://mindfulhub-database.onrender.com/post/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -112,7 +112,7 @@ const PostPage = () => {
               }))
             }
           />
-          
+
           <input
             type="checkbox"
             value={newComment.isAnonymous}
@@ -145,7 +145,7 @@ const PostPage = () => {
           <h3>No Comments Found</h3>
         )}
       </div>
-      
+
     </div>
   );
 };
