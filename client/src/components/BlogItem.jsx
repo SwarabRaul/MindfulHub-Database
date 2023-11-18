@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
+import "../styles/BlogItem.css"
+
 const BlogItem = (props) => {
 
     const navigate = useNavigate()
@@ -9,10 +11,11 @@ const BlogItem = (props) => {
     }
 
   return (
-    <div onClick={handleBlog} >
+    <div onClick={handleBlog} className="blogItem" >
         <h2>{props.title}</h2>
-        <h4>{props.desc}</h4>
+        <p>{props.desc}</p>
         <h5>{props.author}</h5>
+        <hr />
     </div>
   )
 }
