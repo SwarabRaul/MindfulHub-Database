@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ButtonComponent from './ButtonComponent';
-// import './QuestionnaireForm.css'
+import './../styles/QuestionnaireForm.css'
 
 const QuestionnaireForm = () => {
     const [formData, setFormData] = useState({
@@ -42,16 +42,14 @@ const QuestionnaireForm = () => {
     };
 
     return (
-       
+
         <div className='Box_qn'>
-            <div className='Heading_qn'>
                 <h1>Test</h1>
-                <p>
-                    Your mental well-being is important to us. 
+                <h4>
+                    Your mental well-being is important to us.
                     Please take a moment to answer the following questions to help us provide you with relevant information and support.
                     Your responses are completely anonymous.
-                </p>
-            </div>
+                </h4>
             <form className='Form_qn'>
                 {questions.map((question, index) => (
                     <div key={index} className='div_qn'>
@@ -67,6 +65,7 @@ const QuestionnaireForm = () => {
                                 {value}
                             </label>
                         ))}
+                         <hr />
                     </div>
                 ))}
 
