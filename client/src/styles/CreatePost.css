@@ -112,6 +112,6 @@
   padding: 20px;
   text-align: center;
   position: relative;
-  background: url("Login_Background_2.jpg") center/cover;
+  background: url("../../public/CreatePost_Background.jpg") center/cover;
   border-radius: 8px 0 0 8px;
 }
