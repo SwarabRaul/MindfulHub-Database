@@ -1,5 +1,3 @@
-// ScheduleChat.jsx
-
 import React, { useState } from 'react';
 import '../styles/ScheduleChat.css';
 
@@ -26,6 +24,8 @@ const ScheduleChat = () => {
         setScheduledDateTime('');
         setMessage('');
         setIsAnonymous(false);
+
+        alert('Scheduled Data Send Successfully!');
     };
 
     return (

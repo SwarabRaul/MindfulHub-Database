@@ -43,10 +43,11 @@ h2 {
     text-align: center;
 }
 
-label {
+.LoginLable {
     display: block;
     margin-bottom: 8px;
     color: #5c5c5c;
+    margin-left: 0px
 }
 
 input {

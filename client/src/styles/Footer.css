@@ -1,5 +1,3 @@
-/* Footer.css */
-
 body {
     margin: 0;
     padding: 0;
@@ -16,18 +14,14 @@ body {
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    /* Allow content to wrap to the next line on smaller screens */
     justify-content: center;
-    /* Center content horizontally */
     align-items: center;
-    /* Center content vertically */
 }
 
 .company-info,
 .contact-info {
     flex: 1;
     text-align: center;
-    /* Center text within its container */
 }
 
 h3 {
@@ -40,19 +34,14 @@ a {
 
 .logo {
     margin-bottom: 20px;
-    /* Add space between the logo and company/contact info */
     display: flex;
     justify-content: center;
-    /* Center the image horizontally */
     align-items: center;
-    /* Center the image vertically */
 }
 
 .logo img {
     max-height: 130px;
-    /* Set the maximum height for the logo */
     max-width: 100%;
-    /* Make sure the image doesn't exceed its container's width */
     border-radius: 50%;
 }
 
@@ -60,20 +49,16 @@ a {
     margin-top: 20px;
 }
 
-/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        /* Stack content vertically on smaller screens */
     }
 
     .company-info,
     .contact-info,
     .logo {
         flex: none;
-        /* Reset flex to allow full width on smaller screens */
         width: 100%;
         margin-bottom: 10px;
-        /* Add space between sections on smaller screens */
     }
 }

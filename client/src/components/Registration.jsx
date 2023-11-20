@@ -13,6 +13,8 @@ const Registration = () => {
   }, []);
 
   const handleRegister = async () => {
+    console.log("Before registration request");
+
     const response = await fetch("https://mindfulhub-database.onrender.com/user/register", {
       method: "POST",
       headers: {
@@ -21,12 +23,16 @@ const Registration = () => {
       body: JSON.stringify({ username, email, password }),
     });
 
+    console.log("After registration request");
+
     if (response.status === 200) {
-      navigate("/questionnaireForm");
+      console.log("Registration successful");
+      navigate("/login");
     } else {
-      console.error("Registration failed");
+      console.error("Registration failed", response);
     }
   };
+
 
   return (
     <div className="bg-container">
@@ -35,21 +41,21 @@ const Registration = () => {
           <div className="registration-form">
             <h2>Register</h2>
 
-            <label htmlFor="username">Username</label>
+            <label className="RegistrationLable" htmlFor="username">Username</label>
 
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <label htmlFor="email">Email-Id</label>
+            <label className="RegistrationLable" htmlFor="email">Email-Id</label>
 
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="password">Password</label>
+            <label className="RegistrationLable" htmlFor="password">Password</label>
 
             <input
               type="password"

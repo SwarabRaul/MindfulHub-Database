@@ -41,13 +41,13 @@ const Login = () => {
             </div>
             <div className="form-container">
                 <h2>Login</h2>
-                <label htmlFor="username">Username</label>
+                <label className="LoginLable" htmlFor="username">Username</label>
                 <input
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
-                <label htmlFor="password">Password</label>
+                <label className="LoginLable" htmlFor="password">Password</label>
                 <input
                     type="password"
                     value={password}

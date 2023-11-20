@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ButtonComponent from './ButtonComponent';
 import './../styles/QuestionnaireForm.css';
 
 const QuestionnaireForm = () => {
@@ -59,16 +58,16 @@ const QuestionnaireForm = () => {
     let status;
     if (totalPoints >= 50) {
       status =
-        "Congratulations on your outstanding performance in the mental test! Your results are truly exceptional, reflecting a high level of intelligence and proficiency. Your strengths shine through, showcasing your impressive capabilities. Keep up the exceptional work, and consider using your talents to explore new challenges and opportunities. The sky's the limit for someone with your remarkable abilities!";
+        "Congratulations on an outstanding performance in the mental test! Your exceptional results showcase high intelligence and proficiency. Your impressive capabilities and strengths shine through. Keep up the exceptional work and consider using your talents for new challenges. The sky's the limit for someone with your remarkable abilities!";
     } else if (totalPoints >= 30) {
       status =
-        "Great job on your mental test! Your results are solid and indicate a good grasp of the material. You've demonstrated commendable skills and understanding. Recognize your strengths, and consider using this foundation to further develop in areas that interest you. With continued dedication and curiosity, you're well on your way to achieving even greater success. You can use this website to achieve or to improve your overall wellness. Keep up the good work!";
+        "Great job on the mental test! Solid results show a good grasp of the material. Your commendable skills and understanding shine through. Recognize your strengths, and use them to develop in areas of interest. With dedication and curiosity, you're on your way to greater success. Use this website for overall wellness. Keep up the good work!";
     } else if (totalPoints >= 20) {
       status =
-        "Congratulations on completing the mental test! Your results indicate that you have many strengths, and your performance is solid overall. Like everyone, there are areas where you can further enhance your skills, and that's a wonderful opportunity for growth. Focus on those specific points for improvement, and remember that progress is a journey. Your current achievements are commendable, and with a bit of targeted effort, you'll undoubtedly excel even more. You can use this website to achieve or to improve your overall wellness. Keep up the great work!";
+        "Congratulations on finishing the mental test! Your results reveal solid performance and many strengths. While there's room for skill enhancement, see it as a chance for growth. Focus on specific areas, remembering progress is a journey. Your achievements are commendable; with targeted effort, you'll excel further. Use this website for overall wellness. Keep up the great work!";
     } else {
       status =
-        "While the results of your mental test may not be what you were hoping for, remember that everyone faces challenges. You can use this website as an opportunity for self-reflection and growth. Identify specific areas that need improvement and create a plan to address them. Remember that setbacks are a natural part of the learning process. Seek support, whether from peers, mentors, or resources, and approach this as a chance to learn and improve. You have the resilience to turn things around with dedication and effort. Keep moving forward!";
+        "While test results may disappoint, view it as a chance for growth. Identify areas for improvement, seek support, and embrace setbacks as part of learning. With resilience and effort, you can turn things around and keep moving forward.";
     }
 
     setMentalStatus(status);
@@ -94,18 +93,18 @@ const QuestionnaireForm = () => {
 
   return (
     <div className="Box_qn">
-      <h1>Test</h1>
-      <h4>
+      <h1>Questionnaire</h1>
+      <p>
         Your mental well-being is important to us. Please take a moment to
         answer the following questions to help us provide you with relevant
         information and support. Your responses are completely anonymous.
-      </h4>
+      </p>
       <form className="Form_qn">
         {questions.map((question, index) => (
           <div key={index} className="div_qn">
-            <label>{`${index + 1}. ${question}`}</label>
+            <label className="questionsLable">{`${index + 1}. ${question}`}</label>
             {options[index].map((option, value) => (
-              <label key={value}>
+              <label className="answerLable" key={value}>
                 <input
                   type="radio"
                   value={option}

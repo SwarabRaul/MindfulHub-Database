@@ -42,10 +42,11 @@ h2 {
     text-align: center;
 }
 
-label {
+.RegistrationLable {
     display: block;
     margin-bottom: 8px;
     color: #333333;
+    margin-left: 0px;
 }
 
 input {
@@ -90,12 +91,13 @@ input {
     transition: color 0.3s ease;
 }
 
-.loginLink{
+.loginLink {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.loginLink p{
+
+.loginLink p {
     margin-right: 10px;
 
 }

@@ -24,7 +24,7 @@ const Blog = () => {
   return (
     <div className='blog__container'>
         <h1>{DUMMY_VALUE[id-1].title}</h1>
-        <h4>{DUMMY_VALUE[id-1].desc}</h4>
+        <p>{DUMMY_VALUE[id-1].desc}</p>
         <h5>~{DUMMY_VALUE[id-1].author}</h5>
     </div>
   )

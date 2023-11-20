@@ -1,4 +1,3 @@
-// import './CreatePost.css';
 import '../styles/CreatePost.css';
 
 import { useEffect, useState } from "react";
@@ -68,8 +67,7 @@ const CreatePost = () => {
             ></textarea>
             <div className="createpost_right_checkbox">
               <div className="checkbox-container">
-                <input
-
+                <input className="checkboxAnon"
                   type="checkbox"
                   name="anonymous"
                   id="anonymous"
@@ -79,8 +77,7 @@ const CreatePost = () => {
 
                   }}
                 />
-                <label className='sm' htmlFor="anonymous">Post Anonymously</label>
-
+                <label className='PostAnonLable' htmlFor="anonymous">Post Anonymously</label>
               </div>
             </div>
             <button className='btn2'

@@ -4,44 +4,35 @@
     font-weight: 900;
 }
 
-.Box_qn h4 {
+.Box_qn p {
     text-align: center;
-    width: 70vw;
+    width: 70%;
     margin: 0 auto;
-
-    margin-bottom: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
-
 
 .Form_qn {
     width: 50vw;
     margin: 0 auto;
     background-color: #fffafa;
-    border: 1px solid #cefdce;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
 }
 
-.div_qn{
-    width: 95%;
-    margin:0 auto;
+.div_qn {
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-label {
+.questionsLable {
     display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-left: 90px;
-}
-
-
-label input {
-    margin-top: 10px;
-    margin-right: -170px;
-    margin-left: -170px;
+    align-items: center;
+    text-align: left;
 }
 
 .btn_qn {
@@ -52,10 +43,28 @@ label input {
     color: #fff;
     background-color: #678c70;
     transition: background-color 0.3s ease;
-    margin: 0 340px;
+    margin: 20px auto 0;
+    display: block;
 }
 
 
 .btn_qn:hover {
     background-color: #9a7864;
-} 
+}
+
+.answerLable {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.answerLable input {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.answerLable:hover input {
+    transform: scale(1.2);
+}

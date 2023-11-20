@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef  } from "react";
+import { useEffect, useState, useRef } from "react";
 import { socket } from "../socket";
 
 import "../styles/LiveChat.css";
@@ -47,7 +47,7 @@ const LiveChat = () => {
   return (
     <div className="liveChat">
       <h1>Live Chat</h1>
-      
+      <p className="LiveChat_Intro">Welcome to our Community Support Chat, a warm and inclusive space where individuals come together to share experiences, offer support, and find understanding. At Minfulhub, we believe in the power of community, and this chat is a place where you can connect with others who are navigating similar mental health journeys.</p>
       <div className="liveChat_messageArea" ref={messageAreaRef}>
         {message?.map((item, index) => {
           return (

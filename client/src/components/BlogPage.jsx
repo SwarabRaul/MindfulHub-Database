@@ -82,11 +82,11 @@ const BlogPage = () => {
   return (
     <div className="blogPage__main" >
       <h1>Blogs</h1>
-      <h4>
+      <p className="Blogpage_Intro">
         Our mental well-being blog offers expert insights, tips, and personal
         stories to boost your mental health. Join our community and find
         inspiration for a happier, healthier mind.
-      </h4>
+      </p>
       <div className="blogPage" >
         {DUMMY_VALUE.map((item) => {
           return (
