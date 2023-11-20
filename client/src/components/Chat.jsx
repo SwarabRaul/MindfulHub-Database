@@ -1,64 +1,81 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import './Chat.css';
+import '../styles/Chat.css';
 
 const Chat = () => {
   const navigate = useNavigate();
 
   const [posts, setPosts] = useState();
-  const [isDisabled, setIsDisabled] = useState(true)
+  const [isDisabled, setIsDisabled] = useState(true);
 
   useEffect(() => {
     document.title = "Chat";
-    document.body.style.backgroundColor = "#ffffff";
 
-    localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true)
+    localStorage.getItem("token") ? setIsDisabled(false) : setIsDisabled(true);
 
-
-    fetch("http://localhost:8081/post")
+    fetch("https://mindfulhub-database.onrender.com/post")
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data)
+        setPosts(data);
       });
   }, []);
 
   return (
-    <div class="backgrd">
-      <div class="chatbox">
-      {/* <img src="./images/gif1.gif" alt="Animated GIF" /> */}
-        <div class="title">
-          <h1>CHAT</h1>
+    <div className="backgrd">
+      <div className="chatbox">
+        {/* <img src="./images/gif1.gif" alt="Animated GIF" /> */}
+        <div className="chat">
+          <h1>ChatRoom</h1>
+          <h3>Secure place to ask for help or help others.</h3>
         </div>
-        <div class="btn_chat">
-          <button class="btn1">Live Chat</button>
-          <button class="btn2"
+        <div className="btn_chat">
+
+          <button className="btn1" onClick={() => navigate("/livechat")}>
+            Live Chat
+          </button>
+          <button
+            className="btn2"
             onClick={() => {
               navigate("/schedulechat");
             }}
-          // disabled={isDisabled}
+            disabled={isDisabled}
           >
-            Schedule a Chat with Expert
+            One on one help
           </button>
-          <button class="btn3"
+          <button
+            className="btn3"
             onClick={() => {
               navigate("/createpost");
             }}
-          // disabled={isDisabled}
-
+            disabled={isDisabled}
           >
             Create a Post
           </button>
         </div>
-        {posts?.length !== 0 ? <>{posts?.map((item) => {
-          return (
-            <div key={item._id} onClick={() => {
-              navigate(`/${item._id}`)
-            }} >
-              <h1>{item.title}</h1>
-              <h3>{item.message}</h3>
-            </div>
-          )
-        })}</> : <h1>No post Found</h1>}
+
+        <div className="content">
+          {posts?.length !== 0 ? (
+            <>
+              {posts?.map((item) => {
+                return (
+                  <div className="blog"
+                    key={item._id}
+                    onClick={() => {
+                      navigate(`/${item._id}`);
+                    }}
+                  >
+                    <h3>{item.title}</h3>
+                    <p>{item.message}</p>
+                  </div>
+                );
+              })}
+            </>
+          ) : (
+            <h1>No post Found</h1>
+          )}
+        </div>
+
+
       </div>
     </div>
   );
