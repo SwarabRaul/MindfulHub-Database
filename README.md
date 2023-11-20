@@ -85,13 +85,13 @@ The chosen tech stack reflects our commitment to creating a secure, user-friendl
 
 We want to thank the following contributors who have helped make MindfulHub better:
 
-| **Name**               | **Email**                                    |
-|------------------------|----------------------------------------------|
-| Swarab Raul            | [swarab.raul@gmail.com](mailto:swarab.raul@gmail.com)         |
-| Yug                    | [yug@gmail.com](mailto:yug@gmail.com)                       |
-| Shaurya Shekhar        | [shaurya.shekhar07s@gmail.com](mailto:shaurya.shekhar07s@gmail.com) |
-| Vineetha Mary Mathews  | [vineethamathews1234@gmail.com](mailto:vineethamathews1234@gmail.com) |
-| Deepti Kademani        | [deeptik0531@gmail.com](mailto:deeptik0531@gmail.com)         |
+| **Name**                           | **Email**                                                             |
+|------------------------------------|-----------------------------------------------------------------------|
+| Swarab Raul (SwarabRaul)           | [swarab.raul@gmail.com](mailto:swarab.raul@gmail.com)                 |
+| Yug Agarwal (03YugAgarwal)         | [03yugagarwal@gmail.com](mailto:03yugagarwal@gmail.com)               |
+| Shaurya Shekhar (S07I)             | [shaurya.shekhar07s@gmail.com](mailto:shaurya.shekhar07s@gmail.com)   |
+| Vineetha Mary Mathews (vineethamm) | [vineethamathews1234@gmail.com](mailto:vineethamathews1234@gmail.com) |
+| Deepti Kademani (Deepti0531)       | [deeptik0531@gmail.com](mailto:deeptik0531@gmail.com)                 |
 
 ## Contributing
 
@@ -142,10 +142,10 @@ If you encounter any issues or have suggestions, please [create a GitHub issue](
 
 If you have any inquiries or issues, please don't hesitate to reach out. We're here to help!
 
-| **Name**               | **Email**                                    |
-|------------------------|----------------------------------------------|
-| Swarab Raul            | [swarab.raul@gmail.com](mailto:swarab.raul@gmail.com)         |
-| Yug                    | [yug@gmail.com](mailto:yug@gmail.com)                       |
-| Shaurya Shekhar        | [shaurya.shekhar07s@gmail.com](mailto:shaurya.shekhar07s@gmail.com) |
-| Vineetha Mary Mathews  | [vineethamathews1234@gmail.com](mailto:vineethamathews1234@gmail.com) |
-| Deepti Kademani        | [deeptik0531@gmail.com](mailto:deeptik0531@gmail.com)         |
+| **Name**                           | **Email**                                                             |
+|------------------------------------|-----------------------------------------------------------------------|
+| Swarab Raul (SwarabRaul)           | [swarab.raul@gmail.com](mailto:swarab.raul@gmail.com)                 |
+| Yug Agarwal (03YugAgarwal)         | [03yugagarwal@gmail.com](mailto:03yugagarwal@gmail.com)               |
+| Shaurya Shekhar (S07I)             | [shaurya.shekhar07s@gmail.com](mailto:shaurya.shekhar07s@gmail.com)   |
+| Vineetha Mary Mathews (vineethamm) | [vineethamathews1234@gmail.com](mailto:vineethamathews1234@gmail.com) |
+| Deepti Kademani (Deepti0531)       | [deeptik0531@gmail.com](mailto:deeptik0531@gmail.com)                 |
